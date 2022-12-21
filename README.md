@@ -28,7 +28,7 @@
 
 # 📖 <a name="Leaderboard"></a>
 
-> A simple app that loads the users name and score to the recent-score section dynamically.
+> A simple app called Leaderboard that keeps record of the previous score and current score in a particular game by loading the users name and score to the board section dynamically.
 
 ## 🛠 Built With <a name="built-with">HTML, CSS, & Javascript</a>
 
@@ -66,7 +66,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://felixdev22.github.io/Peer-Feedback-To-do-list/)
+- [Live Demo Link](https://felixdev22.github.io/Leaderboard1/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -81,7 +81,7 @@ Code Editor:visual Studio code - Chrome Web Browser
 Clone this repository to your desired folder:
 
 cd my-folder
-git clone https://github.com/felixDev22/Leaderboard
+git clone https://github.com/felixDev22/Leaderboard1
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
