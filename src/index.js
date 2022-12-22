@@ -1,12 +1,12 @@
 import './style.css';
 
-import { generateScore, addScore, showScore } from './modules/display.js';
-import { name, score, submit } from './modules/variables.js';
+import { displayScore, addScore, refreshScore } from './modules/carRace.js';
+import { name, score, submit, refresh } from './modules/variables.js';
 
 // on Load
 
 window.addEventListener('load', () => {
-  showScore();
+  refreshScore();
 });
 
 // on clicking submit button
@@ -18,6 +18,5 @@ submit.addEventListener('click', (e) => {
     score.placeholder = 'Enter your Score';
   } else {
     addScore();
-    generateScore();
   }
 });

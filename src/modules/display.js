@@ -1,5 +1,5 @@
 import { inputScore, name, score } from './variables.js';
-import getRaceScore from './getApiScore.js';
+import { getRaceScore } from './carRace.js';
 
 let scoreArr = [];
 
@@ -12,3 +12,21 @@ const addScore = () => {
   name.value = '';
   score.value = '';
 };
+
+// To render dynamically the recent scores
+const displayScore = () => {
+  scoreArr.forEach((user) => {
+    inputScore.innerHTML += `
+        <li>${user.name}: ${user.score}</li>`;
+    name.value = '';
+    score.value = '';
+  });
+};
+
+const refreshScore = async () => {
+  const arr = await getRaceScore();
+  scoreArr = await arr;
+  displayScore();
+};
+
+export { displayScore, addScore, refreshScore };

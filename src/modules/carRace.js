@@ -2,6 +2,7 @@
 
 const getRaceScore = async () => {
   const response = await fetch(
+    // eslint-disable-next-line comma-dangle
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/KfbBpq9lwKHbgKVV1Z1q/scores'
   );
   const results = await response.json();
@@ -18,6 +19,7 @@ const addScore = async (user) => {
       headers: {
         'content-type': 'application/json; charset=UTF-8',
       },
+      // eslint-disable-next-line comma-dangle
     }
   );
   return data;
