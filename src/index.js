@@ -1,6 +1,8 @@
 import './style.css';
 
-import { displayScore, addScore, refreshScore } from './modules/carRace.js';
+import { addScore } from './modules/carRace.js';
+import { refreshScore } from './modules/display.js';
+// eslint-disable-next-line object-curly-newline
 import { name, score, submit, refresh } from './modules/variables.js';
 
 // on Load
@@ -19,4 +21,9 @@ submit.addEventListener('click', (e) => {
   } else {
     addScore();
   }
+});
+
+// on clicking refresh button
+refresh.addEventListener('click', () => {
+  refreshScore();
 });
