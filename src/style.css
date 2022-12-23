@@ -16,16 +16,29 @@
 
 body {
   font-family: Open Sans, sans-serif;
-  background: #dfdfdf;
+}
+
+.game-wrapper {
+  background: url(./images/Car-Race.png);
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 0;
 }
 
 .container {
+  padding: 1rem 10%;
+}
+
+.display-board {
   background: #fff;
-  max-width: 980px;
+  width: 980px;
   height: auto;
-  margin: 15% auto;
+  margin: 20% auto;
   border-radius: 10px;
-  padding: 50px;
+  padding: 30px;
 }
 
 h1 {
