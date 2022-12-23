@@ -12,6 +12,7 @@
 :root {
   --border-color: 1px solid #3f3f3f;
   --grey-color: #e5e5e5;
+  --text-grey: #4b4b4b;
 }
 
 body {
@@ -33,60 +34,76 @@ body {
 }
 
 .display-board {
-  background: #fff;
-  width: 980px;
+  background: rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(2rem);
+  width: 920px;
   height: auto;
   margin: 20% auto;
   border-radius: 10px;
   padding: 30px;
+  border: 1px solid #fff;
 }
 
 h1 {
   margin-top: 5%;
   font-size: 3rem;
-  color: #000;
+  color: #fff;
 }
 
 .scoreboard {
   margin-top: 10%;
   display: flex;
-  gap: 15%;
+  gap: 13%;
 }
 
 .recent-side {
   display: flex;
   flex-direction: row;
   gap: 4.5rem;
+  color: #fff;
 }
 
 button {
   padding: 10px 25px;
   font-size: 1rem;
-  box-shadow: 5px 5px;
   cursor: pointer;
+  background: linear-gradient(
+    to bottom,
+    rgb(51, 204, 255) 0%,
+    rgb(7, 108, 196) 100%
+  );
+  color: #fff;
+  border: none;
+  border-radius: 15px;
 }
 
 button:hover {
-  background: #000;
-  color: #fff;
+  background: rgb(5, 2, 110);
+  box-shadow: 2px 2px 5px lightblue;
 }
 
 .display {
   margin-top: 2rem;
-  background: #fff;
+  background: linear-gradient(
+    to bottom,
+    rgb(51, 204, 255) 0%,
+    rgb(7, 108, 196) 100%
+  );
   border: var(--border-color);
   width: 350px;
   font-size: 1.3rem;
   height: auto;
+  border-radius: 10px;
 }
 
 li {
-  background: var(--grey-color);
   padding: 0.5rem;
+  opacity: 70%;
 }
 
 li:nth-child(odd) {
   background: #fff;
+  color: var(--text-grey);
 }
 
 .form {
@@ -95,6 +112,7 @@ li:nth-child(odd) {
 
 form h2 {
   margin-bottom: 11%;
+  color: #fff;
 }
 
 input {
