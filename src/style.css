@@ -36,6 +36,7 @@ body {
 .display-board {
   background: rgb(255, 255, 255, 0.1);
   backdrop-filter: blur(2rem);
+  box-shadow: 10px 10px 10px rgb(9, 9, 9, 0.6);
   width: 920px;
   height: auto;
   margin: 20% auto;
