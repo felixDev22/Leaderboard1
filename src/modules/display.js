@@ -1,32 +1,30 @@
 import { inputScore, name, score } from './variables.js';
-import { getRaceScore } from './carRace.js';
+import getRaceScore from './carRace.js';
+import postScore from './post.js';
 
+// eslint-disable-next-line prefer-const
 let scoreArr = [];
 
-// To get recent scores
 const addScore = () => {
   const user = {};
-  user.name = name.value;
+  user.user = name.value;
   user.score = score.value;
   scoreArr.push(user);
+  postScore(user);
   name.value = '';
   score.value = '';
 };
 
 // To render dynamically the recent scores
-const displayScore = () => {
-  scoreArr.forEach((user) => {
+const displayScore = async () => {
+  inputScore.innerHTML += '';
+  const scoreArr = await getRaceScore();
+  scoreArr.forEach((result) => {
     inputScore.innerHTML += `
-        <li>${user.name}: ${user.score}</li>`;
+        <li>${result.user}: ${result.score}</li>`;
     name.value = '';
     score.value = '';
   });
 };
 
-const refreshScore = async () => {
-  const arr = await getRaceScore();
-  scoreArr = await arr;
-  displayScore();
-};
-
-export { displayScore, addScore, refreshScore };
+export { displayScore, addScore };

@@ -1,12 +1,12 @@
-// get the data from API
-
+// fetch the data from API
 const getRaceScore = async () => {
-  const response = await fetch(
+  const request = await fetch(
     // eslint-disable-next-line comma-dangle
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/KfbBpq9lwKHbgKVV1Z1q/scores'
   );
-  const results = await response.json();
-  const scoreList = results.result;
-  return scoreList;
+  const data = await request.json();
+  data.result.sort((a, b) => b.score - a.score);
+  return data.result;
 };
 
+export default getRaceScore;
