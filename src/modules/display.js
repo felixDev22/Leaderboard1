@@ -1,38 +1,36 @@
 import { inputScore, name, score } from './variables.js';
+import getRaceScore from './carRace.js';
+import postScore from './post.js';
 
+// eslint-disable-next-line prefer-const
 let scoreArr = [];
 
-// Save To Local Directory
-const pushToLocal = () => {
-  localStorage.setItem('inputScore', JSON.stringify(scoreArr));
-};
-
-// To get recent scores and push to LocalStorage
 const addScore = () => {
-  const user = {};
-  user.name = name.value;
-  user.score = score.value;
-  scoreArr.push(user);
-  pushToLocal();
+  const users = {};
+  users.user = name.value;
+  users.score = score.value;
+  scoreArr.push(users);
+  postScore(users);
+  name.value = '';
+  score.value = '';
 };
 
 // To render dynamically the recent scores
-const generateScore = () => {
+const displayScore = () => {
+  inputScore.innerHTML = '';
   scoreArr.forEach((user) => {
+    inputScore.innerHTML += '';
     inputScore.innerHTML += `
-        <li>${user.name}: ${user.score}</li>`;
+        <li>${user.user}: ${user.score}</li>`;
     name.value = '';
     score.value = '';
   });
 };
 
-// To display recent added scores
-const showScore = () => {
-  if (localStorage.getItem('inputScore')) {
-    scoreArr = JSON.parse(localStorage.getItem('inputScore'));
-  }
-
-  generateScore();
+const refreshScore = async () => {
+  const newScoreArr = await getRaceScore();
+  scoreArr = await newScoreArr;
+  displayScore();
 };
 
-export { generateScore, addScore, showScore };
+export { displayScore, addScore, refreshScore };

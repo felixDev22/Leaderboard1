@@ -66,7 +66,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://felixdev22.github.io/Peer-Feedback-To-do-list/)
+- [Live Demo Link](https://felixdev22.github.io/Leaderboard1/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
