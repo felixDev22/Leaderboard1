@@ -95,6 +95,7 @@ button:hover {
   font-size: 1.3rem;
   height: auto;
   border-radius: 10px;
+  border: 1px solid #fff;
 }
 
 li {
@@ -122,6 +123,7 @@ input {
   margin-bottom: 1rem;
   font-size: 1rem;
   letter-spacing: 2px;
+  border-radius: 10px;
 }
 
 button#submit {
