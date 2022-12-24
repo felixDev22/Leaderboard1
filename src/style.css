@@ -21,7 +21,7 @@ body {
 }
 
 .car-game-wrapper {
-  background-image: url('./images/car-back.png');
+  background-image: url('./images/car-race01.jpg');
   width: 100%;
   height: auto;
   background-position: center;
@@ -33,15 +33,6 @@ body {
 
 .container {
   padding: 1rem 10%;
-}
-
-.logo {
-  background-image: url('./images/logo01.jpg');
-  margin-top: 120px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-repeat: no-repeat;
 }
 
 .car1 {
@@ -65,6 +56,10 @@ body {
   height: 100%;
   position: absolute;
   background-repeat: no-repeat;
+}
+
+.car2 img {
+  width: 50%;
 }
 
 .display-board {
@@ -183,5 +178,23 @@ button#submit {
   to {
     margin-bottom: 0%;
     height: 100%;
+  }
+}
+/* stylelint-disable-next-line no-duplicate-selectors */
+.car1 {
+  animation-duration: 4s;
+  animation-name: slidein;
+  animation-iteration-count: 3;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
   }
 }
