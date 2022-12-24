@@ -17,6 +17,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   optimization: {
     runtimeChunk: 'single',
@@ -32,8 +33,8 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        type: 'asset',
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },

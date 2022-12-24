@@ -20,18 +20,51 @@ body {
   font-family: Open Sans, sans-serif;
 }
 
-.game-wrapper {
-  background: url(./images/Car-Race2.png);
+.car-game-wrapper {
+  background-image: url('./images/car-back.png');
   width: 100%;
   height: auto;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: 0;
+  top: 0;
+  position: relative;
 }
 
 .container {
   padding: 1rem 10%;
+}
+
+.logo {
+  background-image: url('./images/logo01.jpg');
+  margin-top: 120px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.car1 {
+  background-image: url('./images/car01.jpg');
+  margin-top: 120px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.car1 img {
+  width: 90%;
+}
+
+.car2 {
+  background-image: url('./images/car3.jpg');
+  margin-top: 40%;
+  margin-left: 50%;
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
 }
 
 .display-board {
