@@ -7,29 +7,35 @@
     <title>Leaderboard</title>
   <script defer src="runtime.js"></script><script defer src="bundle.js"></script></head>
   <body>
-    <div class="container">
-      <h1>Leaderboard</h1>
+    <div class="car-game-wrapper">
+      <div class="car1"></div>
+      <div class="container">
+        <div class="display-board">
+          <h1>Leaderboard</h1>
 
-      <!-- Score board section -->
-      <div class="scoreboard">
-        <div class="recent-scores">
-          <div class="recent-side">
-            <h2>Recent Scores</h2>
-            <button>Refresh</button>
-          </div>
-          <div class="display">
-            <!-- Scores added dynamically  -->
-            <ul id="board" class="recent-scores"></ul>
+          <!-- Score board section -->
+          <div class="scoreboard">
+            <div class="recent-scores">
+              <div class="recent-side">
+                <h2>Recent Scores</h2>
+                <button id="refresh">Refresh</button>
+              </div>
+              <div class="display">
+                <!-- Scores added dynamically  -->
+                <ul id="board" class="recent-scores"></ul>
+              </div>
+            </div>
+
+            <!-- form section -->
+            <form class="form">
+              <h2>Add your Score</h2>
+              <input type="text" placeholder="Your name" id="name" />
+              <input type="number" placeholder="Your score" id="score" />
+              <button id="submit">Submit</button>
+            </form>
+            <div class="car2"></div>
           </div>
         </div>
-
-        <!-- form section -->
-        <form class="form">
-          <h2>Add your Score</h2>
-          <input type="text" placeholder="Your name" id="name" />
-          <input type="text" placeholder="Your score" id="score" />
-          <button type="submit" id="submit">Submit</button>
-        </form>
       </div>
     </div>
   </body>
