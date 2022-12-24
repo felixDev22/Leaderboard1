@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-colon-newline-after */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@300;500;600;700&family=Quicksand:wght@300;400;600;700&display=swap');
 
 * {
@@ -12,68 +13,129 @@
 :root {
   --border-color: 1px solid #3f3f3f;
   --grey-color: #e5e5e5;
+  --text-grey: #4b4b4b;
 }
 
 body {
   font-family: Open Sans, sans-serif;
-  background: #dfdfdf;
+}
+
+.car-game-wrapper {
+  background-image: url('./images/car-race01.jpg');
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  position: relative;
 }
 
 .container {
-  background: #fff;
-  max-width: 980px;
+  padding: 1rem 10%;
+}
+
+.car1 {
+  background-image: url('./images/car01.jpg');
+  margin-top: 120px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.car1 img {
+  width: 90%;
+}
+
+.car2 {
+  background-image: url('./images/car3.jpg');
+  margin-top: 40%;
+  margin-left: 50%;
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.car2 img {
+  width: 50%;
+}
+
+.display-board {
+  background: rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(2rem);
+  box-shadow: 10px 10px 10px rgb(9, 9, 9, 0.6);
+  width: 920px;
   height: auto;
-  margin: 15% auto;
+  margin: 20% auto;
   border-radius: 10px;
-  padding: 50px;
+  padding: 30px;
+  border: 1px solid #fff;
 }
 
 h1 {
   margin-top: 5%;
   font-size: 3rem;
-  color: #000;
+  color: #fff;
 }
 
 .scoreboard {
   margin-top: 10%;
   display: flex;
-  gap: 15%;
+  gap: 13%;
 }
 
 .recent-side {
   display: flex;
   flex-direction: row;
   gap: 4.5rem;
+  color: #fff;
 }
 
 button {
   padding: 10px 25px;
   font-size: 1rem;
-  box-shadow: 5px 5px;
   cursor: pointer;
+  background: linear-gradient(
+    to bottom,
+    rgb(51, 204, 255) 0%,
+    rgb(7, 108, 196) 100%
+  );
+  color: #fff;
+  border: none;
+  border-radius: 15px;
 }
 
 button:hover {
-  background: #000;
-  color: #fff;
+  background: rgb(5, 2, 110);
+  box-shadow: 2px 2px 5px lightblue;
 }
 
 .display {
   margin-top: 2rem;
-  background: #fff;
+  background: linear-gradient(
+    to bottom,
+    rgb(51, 204, 255) 0%,
+    rgb(7, 108, 196) 100%
+  );
   border: var(--border-color);
   width: 350px;
   font-size: 1.3rem;
   height: auto;
+  border-radius: 10px;
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+  border: 1px solid #fff;
 }
 
 li {
-  background: var(--grey-color);
   padding: 0.5rem;
+  opacity: 70%;
 }
 
 li:nth-child(odd) {
   background: #fff;
+  color: var(--text-grey);
 }
 
 .form {
@@ -82,6 +144,7 @@ li:nth-child(odd) {
 
 form h2 {
   margin-bottom: 11%;
+  color: #fff;
 }
 
 input {
@@ -90,9 +153,48 @@ input {
   margin-bottom: 1rem;
   font-size: 1rem;
   letter-spacing: 2px;
+  border-radius: 10px;
 }
 
 button#submit {
   float: right;
   margin-right: 3.3rem;
+}
+
+/* ------------ animation---------- */
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+.display {
+  animation-duration: 3s;
+  animation-name: slide-in;
+}
+
+@keyframes slide-in {
+  from {
+    margin-top: 100%;
+    height: 300%;
+  }
+
+  to {
+    margin-bottom: 0%;
+    height: 100%;
+  }
+}
+/* stylelint-disable-next-line no-duplicate-selectors */
+.car1 {
+  animation-duration: 4s;
+  animation-name: slidein;
+  animation-iteration-count: 3;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }

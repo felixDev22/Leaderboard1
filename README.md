@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="./murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./race_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Leaderboard</b></h3>
@@ -28,7 +28,7 @@
 
 # 📖 <a name="Leaderboard"></a>
 
-> A simple app that loads the users name and score to the recent-score section dynamically.
+> is a board that shows the names and positions of the leading competitors in a game.
 
 ## 🛠 Built With <a name="built-with">HTML, CSS, & Javascript</a>
 
@@ -39,21 +39,9 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
   </ul>
 </details>
 
@@ -61,6 +49,7 @@
 
 - Clean and interactive
 - It has implemented Js Dynamic function to take data and display.
+- Adding new score listing
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,14 +63,37 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-Code Editor:visual Studio code - Chrome Web Browser
+In order to run this project you should:
+
+\*You should have git and npm installed on your computer.
 
 ### Clone
 
 Clone this repository to your desired folder:
 
-cd my-folder
-git clone https://github.com/felixDev22/Leaderboard
+```sh
+  mkdir my-game
+  cd my-game
+  git clone https://github.com/felixDev22/Leaderboard1
+```
+
+### Install
+
+Run npm install to install all dependencies required to run the project.
+
+```sh
+  cd leaderboard1
+  npm install
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+ npm start
+ This starts the development server on port: 8080
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
