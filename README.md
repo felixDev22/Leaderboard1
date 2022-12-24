@@ -91,7 +91,7 @@ Run npm install to install all dependencies required to run the project.
 To run the project, execute the following command:
 
 ```sh
- npm run dev
+ npm start
  This starts the development server on port: 8080
 ```
 
